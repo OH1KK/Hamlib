@@ -96,7 +96,7 @@ const struct rig_caps ftdx3000_caps = {
 
     .rx_range_list1 =     {
 	/* General coverage + ham, ANT_5 is RX only antenna */
-	{kHz(30), MHz(60), FTDX3000_ALL_RX_MODES, -1, -1, FTDX3000_VFO_ALL, FTDX3000_TX_ANTS|RIG_ANT_5},
+	{kHz(30), MHz(60), FTDX3000_ALL_RX_MODES, -1, -1, FTDX3000_VFO_ALL, FTDX3000_TX_ANTS},
         RIG_FRNG_END,
     },
 
