@@ -105,7 +105,7 @@
  *
  */
 
-#define FTDX3000_TX_ANTS  (RIG_ANT_1|RIG_ANT_2)
+#define FTDX3000_TX_ANTS  (RIG_ANT_1|RIG_ANT_2|RIG_ANT_3)
 
 #define FTDX3000_MEM_CHNL_LENGTH           1       /* 0x10 P1 = 01 return size */
 #define FTDX3000_OP_DATA_LENGTH            19      /* 0x10 P1 = 03 return size */
@@ -119,7 +119,7 @@
 // #define FTDX3000_PACING_INTERVAL                5
 // #define FTDX3000_PACING_DEFAULT_VALUE           0
 
-/* Delay between bytes sent to FT-5000
+/* Delay between bytes sent to FT-3000
  * Should not exceed value set in CAT TOT menu (rig default is 10 mSec)
  */
 #define FTDX3000_WRITE_DELAY                    0
