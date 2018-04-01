@@ -104,6 +104,7 @@
 #define RIG_MODEL_FT1200 RIG_MAKE_MODEL(RIG_YAESU, 34)
 #define RIG_MODEL_FT991 RIG_MAKE_MODEL(RIG_YAESU, 35)
 #define RIG_MODEL_FT891 RIG_MAKE_MODEL(RIG_YAESU, 36)
+#define RIG_MODEL_FTDX3000 RIG_MAKE_MODEL(RIG_YAESU, 37)
 
 
 /*
@@ -492,7 +493,7 @@
 
 
 /*
- * VEB Funkwerk Köpenick RFT
+ * VEB Funkwerk KÃ¶penick RFT
  */
 #define RIG_RFT 24
 #define RIG_BACKEND_RFT "rft"
