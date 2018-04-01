@@ -1935,12 +1935,16 @@ int newcat_set_ant(RIG * rig, vfo_t vfo, ant_t ant)
                 return -RIG_EINVAL;
             if (newcat_is_rig(rig, RIG_MODEL_FT1200))
                 return -RIG_EINVAL;
+            if (newcat_is_rig(rig, RIG_MODEL_FTDX3000))
+                return -RIG_EINVAL;
             which_ant = '4';
             break;
         case RIG_ANT_5:
             if (newcat_is_rig(rig, RIG_MODEL_FT950))
                 return -RIG_EINVAL;
             if (newcat_is_rig(rig, RIG_MODEL_FT1200))
+                return -RIG_EINVAL;
+            if (newcat_is_rig(rig, RIG_MODEL_FTDX3000))
                 return -RIG_EINVAL;
             /* RX only, on FT-2000/FT-5000/FT-9000 */
             which_ant = '5';
@@ -2728,7 +2732,11 @@ int newcat_get_func(RIG * rig, vfo_t vfo, setting_t func, int *status)
         case RIG_FUNC_COMP:
             if (!newcat_valid_command(rig, "PR"))
                 return -RIG_ENAVAIL;
-            snprintf(priv->cmd_str, sizeof(priv->cmd_str), "PR%c", cat_term);
+            if (newcat_is_rig(rig, RIG_MODEL_FTDX3000)) {
+                snprintf(priv->cmd_str, sizeof(priv->cmd_str), "PR0%c", cat_term);
+            } else {
+                snprintf(priv->cmd_str, sizeof(priv->cmd_str), "PR%c", cat_term);
+            }
             break;
         case RIG_FUNC_VOX:
             if (!newcat_valid_command(rig, "VX"))
